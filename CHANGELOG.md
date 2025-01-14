@@ -1,5 +1,95 @@
 # Changelog
 
+## [3.0.0](https://github.com/J-HaleOf76/lua-dev.nvim/compare/v2.5.2...v3.0.0) (2024-02-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* `config.pathStrict` is now enabled by default. Needs sumneko >= 3.6.0. Much better performance
+
+### Features
+
+* Add `treesitter.query` and `treesitter.language` to stable ([#119](https://github.com/J-HaleOf76/lua-dev.nvim/issues/119)) ([4b6ade9](https://github.com/J-HaleOf76/lua-dev.nvim/commit/4b6ade9bb879aad4d1b2e94e82c36957262ead53))
+* add class to vim.api and vim.loop ([e27c03b](https://github.com/J-HaleOf76/lua-dev.nvim/commit/e27c03b3e312c08e2d4aeed2a0f76199a9729529))
+* add more luv methods and types ([#122](https://github.com/J-HaleOf76/lua-dev.nvim/issues/122)) ([fc01efe](https://github.com/J-HaleOf76/lua-dev.nvim/commit/fc01efe11447a99808b06e362d95a296218fed68))
+* added lpeg types ([4233305](https://github.com/J-HaleOf76/lua-dev.nvim/commit/4233305906767488d3cec31b3a02287d99886e08))
+* added lua_ls luv builtin library. Fixes [#127](https://github.com/J-HaleOf76/lua-dev.nvim/issues/127) ([8c32d8b](https://github.com/J-HaleOf76/lua-dev.nvim/commit/8c32d8b4e765de26b27b76f0072e7c12038cde52))
+* added option shortnames to vim.opt, o, go, bo, wo, opt_local, opt_global ([309eca5](https://github.com/J-HaleOf76/lua-dev.nvim/commit/309eca5584eba48d2b77f3668b3c5db3dee7e838))
+* added overrides for vim.fn.expand and vim.fn.sign_define. Fixes [#72](https://github.com/J-HaleOf76/lua-dev.nvim/issues/72) ([868db41](https://github.com/J-HaleOf76/lua-dev.nvim/commit/868db41830bae23c70b4ed044f64f60870bc8f37))
+* added overrides for vim.fn.glob ([43f51e9](https://github.com/J-HaleOf76/lua-dev.nvim/commit/43f51e9b86d1637644f0fbba5e1e11bef4341750))
+* added overrides for vim.loop.new_timer() ([d15370e](https://github.com/J-HaleOf76/lua-dev.nvim/commit/d15370ee520a169bf6224668ccca175489833948))
+* added possibility to define [@overload](https://github.com/overload) annotations ([a77f5db](https://github.com/J-HaleOf76/lua-dev.nvim/commit/a77f5dbfe2e972789c989e2f3909354b482705c0))
+* added possibility to override auto generated annotations ([9d6b75b](https://github.com/J-HaleOf76/lua-dev.nvim/commit/9d6b75ba119cf825fb92830188724e6f0f31e4ed))
+* added support for lazy.nvim ([6136979](https://github.com/J-HaleOf76/lua-dev.nvim/commit/61369790e4205b74f1667587b3dc5867716500eb))
+* added support for vim.opt methods. Fixes [#73](https://github.com/J-HaleOf76/lua-dev.nvim/issues/73) ([9e56a56](https://github.com/J-HaleOf76/lua-dev.nvim/commit/9e56a56301a297bf8d0c675349c101023a723c22))
+* added support for vimdoc code blocks ([6d8ce16](https://github.com/J-HaleOf76/lua-dev.nvim/commit/6d8ce1602a166c03695aaa976252bcb0fd49a7dc))
+* added types for vim.cmd.* ([9962a1d](https://github.com/J-HaleOf76/lua-dev.nvim/commit/9962a1dd0db41ab6745be2d9e4b3dc70d1aa188c))
+* added vim.iter, vim.version and vim.secure. Fixes [#153](https://github.com/J-HaleOf76/lua-dev.nvim/issues/153) ([76bdb81](https://github.com/J-HaleOf76/lua-dev.nvim/commit/76bdb81a3cd45ff0f42c7d427e3e67fe6e39593c))
+* added vim.treesitter.language ([8d2a950](https://github.com/J-HaleOf76/lua-dev.nvim/commit/8d2a950045450927d8f7652ef26548b28f3137c8))
+* added warnings on old-style setup ([17e73ce](https://github.com/J-HaleOf76/lua-dev.nvim/commit/17e73ce2f9616d5b967e9f3996f3c3b84912ef99))
+* allow config without using lspconfig. Fixes [#83](https://github.com/J-HaleOf76/lua-dev.nvim/issues/83) ([3b6b644](https://github.com/J-HaleOf76/lua-dev.nvim/commit/3b6b6442a036729d950f1b92924ac0f5827638ea))
+* docs.fqn ([8f61232](https://github.com/J-HaleOf76/lua-dev.nvim/commit/8f61232f815e134efdf4cf06e1cd6342f4e369ab))
+* fix indent of doc comments ([5abb32a](https://github.com/J-HaleOf76/lua-dev.nvim/commit/5abb32ab07a2e01726095dcc9bf224f874eeac69))
+* format code blocks as markdown ([e85a190](https://github.com/J-HaleOf76/lua-dev.nvim/commit/e85a19015ceb8498f6e80cb0094eb2dc45603bde))
+* full support of vim.go, wo, bo, o, opt, opt_local, opt_global ([261d29c](https://github.com/J-HaleOf76/lua-dev.nvim/commit/261d29c44328eb4b703e49ba4a6ae4e5297a96fc))
+* handle special Lua keywords ([142d456](https://github.com/J-HaleOf76/lua-dev.nvim/commit/142d456011e0a5df302e5cced535ecaa13be631a))
+* keep original formatting when parsing docs ([6cf4af1](https://github.com/J-HaleOf76/lua-dev.nvim/commit/6cf4af1a026d63e676bddbdf8ad5b3fd726f1218))
+* lua-dev is now neodev ([b43d272](https://github.com/J-HaleOf76/lua-dev.nvim/commit/b43d2726829c0fe2d3950372e13177daaff14ea4))
+* **luv:** more luv types ([39bb79b](https://github.com/J-HaleOf76/lua-dev.nvim/commit/39bb79b688300b0b4672ec83c564d72749482116))
+* **luv:** use the luv addon instead of the deprecated 3rd party ([f06c113](https://github.com/J-HaleOf76/lua-dev.nvim/commit/f06c11344f76fadf2cd497b9490125dfc02946cb))
+* more luv annotations ([b50621a](https://github.com/J-HaleOf76/lua-dev.nvim/commit/b50621a868004292372d91a03c88923b36659d99))
+* new parser ([42e9c51](https://github.com/J-HaleOf76/lua-dev.nvim/commit/42e9c5126904d6715ece660224610f3a38e4b8d4))
+* only load missing functions from mpack on nightly. hidden functions ([f0bf928](https://github.com/J-HaleOf76/lua-dev.nvim/commit/f0bf928719bf1b7eb0ee905e787c29e9a332e25f))
+* **options:** allow setting an option to its type ([1569664](https://github.com/J-HaleOf76/lua-dev.nvim/commit/156966470d19a8b095f9ae620720be3fb85a3772))
+* parse luv return values from docs ([107b7d9](https://github.com/J-HaleOf76/lua-dev.nvim/commit/107b7d9413b8134a72ea838a624679f5a4e4fdf9))
+* proper typing for vim.g, vim.v, vim.b, vim.w and vim.t ([b16231e](https://github.com/J-HaleOf76/lua-dev.nvim/commit/b16231e7af55be112fcb867fd7b5eddf2993e9da))
+* properly parse optional params like (*opts) ([48cca93](https://github.com/J-HaleOf76/lua-dev.nvim/commit/48cca93b6d5da62db8da46c6d81b8fde2f4c8914))
+* set correct default option ([e9e1da3](https://github.com/J-HaleOf76/lua-dev.nvim/commit/e9e1da34d8faa4843fd6d860bc12f552fe2e4a2a))
+* when param name is string, and unknown type, then use string ([ddb8162](https://github.com/J-HaleOf76/lua-dev.nvim/commit/ddb816294b62d7ab76ecbe0f26f2bfb8aef4a5e1))
+
+
+### Bug Fixes
+
+* add correct neovim config directory when pathstrict ([d20c601](https://github.com/J-HaleOf76/lua-dev.nvim/commit/d20c601836c05039926cbfec0b895a3028af70af))
+* add lua directories to workspace.library ([563e365](https://github.com/J-HaleOf76/lua-dev.nvim/commit/563e365b96ea5848e950e216929c08c69d3f4dda))
+* alias `buffer` type ([#103](https://github.com/J-HaleOf76/lua-dev.nvim/issues/103)) ([23b58ff](https://github.com/J-HaleOf76/lua-dev.nvim/commit/23b58ff4e486d32fe9740dcdec0084ee419e1522))
+* better detection of nvim config and plugins where root-dir is incorrect ([d6212c1](https://github.com/J-HaleOf76/lua-dev.nvim/commit/d6212c1527bb5fb4dbb593318cd937ad2d4d6eee))
+* correctly type vim.iter. See [#153](https://github.com/J-HaleOf76/lua-dev.nvim/issues/153) ([5136343](https://github.com/J-HaleOf76/lua-dev.nvim/commit/5136343889f068fda32467cefd41029ca6bdf4d9))
+* docs ([7b96f30](https://github.com/J-HaleOf76/lua-dev.nvim/commit/7b96f30ca6af998b4e3caa9c3886539e3ae83384))
+* handle cases where `vim.fn.stdpath("config")` does not exist. Fixes [#109](https://github.com/J-HaleOf76/lua-dev.nvim/issues/109) ([fc20483](https://github.com/J-HaleOf76/lua-dev.nvim/commit/fc20483383dac11b97df43c83db1bbbd35305172))
+* ignore lua directory ([82c8586](https://github.com/J-HaleOf76/lua-dev.nvim/commit/82c85862e2aaa9c0b63f3176eb8dc513803f2865))
+* indentation from docs ([a4e5103](https://github.com/J-HaleOf76/lua-dev.nvim/commit/a4e5103fd91e9db6d9ac924df3fff94eaca8402a))
+* line context ([fbcdd6d](https://github.com/J-HaleOf76/lua-dev.nvim/commit/fbcdd6da18c124aa0f36a5981302ff29cd644115))
+* **lsp:** make sure everything works when lua root not found. Fixes [#108](https://github.com/J-HaleOf76/lua-dev.nvim/issues/108) ([31cba85](https://github.com/J-HaleOf76/lua-dev.nvim/commit/31cba8554a8e37ecf240fa2e242f0e43e72ae930))
+* **lua_ls:** plugin name detection of symlinked plugins ([#140](https://github.com/J-HaleOf76/lua-dev.nvim/issues/140)) ([a60eaee](https://github.com/J-HaleOf76/lua-dev.nvim/commit/a60eaee19e0c3dcb7e54c64fe9bcfb71420a95c0))
+* **luv:** also parse sync return values ([7b495ec](https://github.com/J-HaleOf76/lua-dev.nvim/commit/7b495ec693ad0bd42268f12f678fdeffa2f62b98))
+* more markdown code blocks ([5b620d9](https://github.com/J-HaleOf76/lua-dev.nvim/commit/5b620d9059d28ff75aadb50b9a2be80ba0b88272))
+* more neodev renames ([d23076d](https://github.com/J-HaleOf76/lua-dev.nvim/commit/d23076d66ab87cf2d2feae7d5ff4f3cf4f0c754d))
+* only skip workspace libraries when needed and extend original config ([e7ca4a2](https://github.com/J-HaleOf76/lua-dev.nvim/commit/e7ca4a2ea0da5e39a639c08c3edb352b9355f09e))
+* options now have proper types ([d9bd9b4](https://github.com/J-HaleOf76/lua-dev.nvim/commit/d9bd9b488e83939e746b8150f2b684e72bb1275e))
+* other way to prevent name change issues ([d3f7002](https://github.com/J-HaleOf76/lua-dev.nvim/commit/d3f70023d925b0c2e3084bb08a42aad3b2c2f027))
+* parameter type for vim.fn.getline() ([#144](https://github.com/J-HaleOf76/lua-dev.nvim/issues/144)) ([ab56354](https://github.com/J-HaleOf76/lua-dev.nvim/commit/ab56354e0e85c3c3f20f770c699fb0038ce7bf42))
+* parameter types for searchpair and searchpairpos ([#130](https://github.com/J-HaleOf76/lua-dev.nvim/issues/130)) ([c87f69c](https://github.com/J-HaleOf76/lua-dev.nvim/commit/c87f69c856505ea778f6fd883a90397e55c8e59d))
+* parameter types for vim.wait and vim.fn.input ([#131](https://github.com/J-HaleOf76/lua-dev.nvim/issues/131)) ([55d3a74](https://github.com/J-HaleOf76/lua-dev.nvim/commit/55d3a747af136da527067e9fe59ad0bb938ecd50))
+* parse incorrect function signatures with missing {} ([7eb0f15](https://github.com/J-HaleOf76/lua-dev.nvim/commit/7eb0f15fe8eaef3c4204e12cd3a94e183dd8f843))
+* provide a class for vim.api ([#117](https://github.com/J-HaleOf76/lua-dev.nvim/issues/117)) ([9737bfc](https://github.com/J-HaleOf76/lua-dev.nvim/commit/9737bfc085cbb8879c19471a65b12fe9bd1ae878))
+* replace invalid param name characters ([e5a553c](https://github.com/J-HaleOf76/lua-dev.nvim/commit/e5a553c6ffd661ab6f42be3f6992baf42f452445))
+* revert [#117](https://github.com/J-HaleOf76/lua-dev.nvim/issues/117) ([dd63031](https://github.com/J-HaleOf76/lua-dev.nvim/commit/dd630312eb978f554006a020554d64c197887644))
+* s/sumneko_lua/lua_ls/ ([#124](https://github.com/J-HaleOf76/lua-dev.nvim/issues/124)) ([307d0fb](https://github.com/J-HaleOf76/lua-dev.nvim/commit/307d0fbce02068eebdaa4ef7da279fdb1bfe6d8e))
+* simplified and improved plugin/config detection ([a34a9e7](https://github.com/J-HaleOf76/lua-dev.nvim/commit/a34a9e7e775f1513466940c31285292b7b8375de))
+* sumneko_lua -&gt; lua_ls ([5076ebb](https://github.com/J-HaleOf76/lua-dev.nvim/commit/5076ebbcbfd0e2164d91ff2073a6f21a561804df))
+* use default values for vim.opt ([#87](https://github.com/J-HaleOf76/lua-dev.nvim/issues/87)) ([66b67cf](https://github.com/J-HaleOf76/lua-dev.nvim/commit/66b67cf8833a98f5e4f92821e4320be82f160916))
+* use integer for buffer, window, etc ([#116](https://github.com/J-HaleOf76/lua-dev.nvim/issues/116)) ([71e3e0c](https://github.com/J-HaleOf76/lua-dev.nvim/commit/71e3e0c2239593e29e06ecc725ba346e29d3186a))
+* use lazy.plugins() ([c87f3c9](https://github.com/J-HaleOf76/lua-dev.nvim/commit/c87f3c9ffb256846e2a51f0292537073ca62d4d0))
+
+
+### Performance Improvements
+
+* `config.pathStrict` is now enabled by default. Needs sumneko &gt;= 3.6.0. Much better performance ([5ff32d4](https://github.com/J-HaleOf76/lua-dev.nvim/commit/5ff32d4d50491f94667733362a52d0fe178e4714))
+* disable legacy setup mechanism, but still show warning ([82423f5](https://github.com/J-HaleOf76/lua-dev.nvim/commit/82423f569d51c79733f5599fb11fb8df46b324d6))
+* dont use glob to find lua dirs. Check bufs instead. Fixes [#80](https://github.com/J-HaleOf76/lua-dev.nvim/issues/80) ([97ebf23](https://github.com/J-HaleOf76/lua-dev.nvim/commit/97ebf23c0d4f5a11f1d68a5abd468751b14980a1))
+* **luals:** don't add workspace library for the fallback scope ([c6be05a](https://github.com/J-HaleOf76/lua-dev.nvim/commit/c6be05aab078827e51aabdc64cc9fba7c06d27b7))
+
 ## [2.5.2](https://github.com/folke/neodev.nvim/compare/v2.5.1...v2.5.2) (2023-03-24)
 
 
